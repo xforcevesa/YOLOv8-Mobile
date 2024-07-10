@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <SurfaceView
+        android:id="@+id/camera_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/panel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/panel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <Button
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/switch_camera" />
+
+        <Spinner
+            android:id="@+id/spinner_model"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/model_array" />
+
+        <Spinner
+            android:id="@+id/spinner_cpu_gpu"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/cpu_gpu_array" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
